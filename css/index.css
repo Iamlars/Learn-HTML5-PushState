@@ -38,13 +38,32 @@ aside a{
 aside a:hover{
   background: #2d2d2d;
 }
+aside a.active{
+  background: #f8f8f8;
+  color:#333;
+}
 main{
   position: relative;
   margin-left: 120px;
   height: 80%;
   background: #fff;
   outline: 1px solid #e6e6e6;
+  overflow:hidden;
 }
+article{
+  transition: all .5s linear;
+  opacity: 0.3;
+  transform: translate3d(0,100%,0);
+}
+.page-active{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+.page-out{
+    opacity: 0;
+    transform: translate3d(0,-100%,0);
+}
+
 .content-wrap{
   padding:30px;
   font-size: 40px;
